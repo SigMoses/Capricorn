@@ -14,7 +14,6 @@ dependencies = [
   "tensorflow>=2.0",
   "numpy>=1.19",
   "Pillow>=8.0",
-  # ...any other entries from requirements.txt...
 ]
 authors = [
   { name="Moshe Newman" },
@@ -33,7 +32,6 @@ classifiers = [
 
 [tool.setuptools]
 # find all packages under your src
-packages = { find = {} }
 include-package-data = true
 
 [tool.setuptools.packages.find]
@@ -42,4 +40,5 @@ where = ["."]
 include = ["capricorn", "capricorn.*"]
 
 [tool.setuptools.package-data]
+# bundle your keras model files inside the package
 "capricorn" = ["ai_models/*.keras"]

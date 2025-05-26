@@ -28,3 +28,10 @@ def predict(model_name, image_array):
     model = _load_model(model_name)
     batch = preprocess_input(image_array, model_name)
     return model.predict(batch)
+
+def label_confidences(probs, labels=ALL_LABELS):
+    """
+    Given a 1D array of softmax probabilities (shape == NUM_CLASSES),
+    return a list of (label, confidence) tuples sorted by confidence desc.
+    """
+    return sorted(zip(labels, probs), key=lambda x: x[1], reverse=True)

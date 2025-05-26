@@ -24,11 +24,30 @@ def preprocess_input(img_array, model_name='capricorn0.1'):
     return np.expand_dims(img, axis=0)
 
 
-def predict(model_name, image_array):
-    """Run inference on a raw image array using the named model."""
+def predict(model_name, image_array, top_k=None):
+    """
+    Run inference on a raw image array using the named model,
+    and return a sorted list of (label, confidence) tuples.
+    If top_k is given, returns only the top_k entries.
+    """
     model = _load_model(model_name)
     batch = preprocess_input(image_array, model_name)
-    return model.predict(batch)
+    raw_probs = model.predict(batch)[0]  # one-dimensional array
+
+    # sanity check
+    if raw_probs.shape[0] != len(ALL_LABELS):
+        raise ValueError(
+            f"Expected {len(ALL_LABELS)} outputs, got {raw_probs.shape[0]}"
+        )
+
+    # pair & sort by confidence descending
+    labeled = sorted(
+        zip(ALL_LABELS, raw_probs),
+        key=lambda x: x[1],
+        reverse=True
+    )
+
+    return labeled if top_k is None else labeled[:top_k]
 
 def label_confidences(probs, labels=ALL_LABELS):
     """

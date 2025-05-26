@@ -6,8 +6,8 @@ import numpy as np
 from PIL import Image
 import pytest
 
-from capricorn_ai.models import list_models, get_model_path
-from capricorn_ai.utils import load_image, preprocess_input
+from capricorn.models import list_models, get_model_path
+from capricorn.utils import load_image, preprocess_input
 
 def test_list_models():
     models = list_models()

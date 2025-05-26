@@ -16,15 +16,19 @@ for line in (here / 'requirements.txt').read_text(encoding='utf-8').splitlines()
         requirements.append(req)
 
 setup(
-    name='capricorn-ai',
+    name='capricorn',
     version='0.1.0',
     description='Deep learning histopathology classification with Keras',
     long_description=long_description,
     long_description_content_type='text/markdown',
-    author='Your Name',  # TODO: replace with actual author
-    url='https://github.com/your-org/capricorn-ai',  # TODO: update URL
+    author='Moshe Newman',  # TODO: replace with actual author if desired
+    url='https://github.com/SigMoses/Capricorn.git',  # TODO: update URL if needed
     packages=find_packages(),
     include_package_data=True,
+    package_data={
+        # Include any .keras files placed under capricorn/models/
+        'capricorn': ['ai_models/*.keras'],
+    },
     install_requires=requirements,
     python_requires='>=3.7',
     classifiers=[

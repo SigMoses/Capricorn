@@ -1,19 +1,5 @@
----
-
-# requirements.txt
-
-tensorflow>=2.10.0
-numpy>=1.19.5
-Pillow>=8.0.0
-
-# (Optional, for tests and dev)
-
-pytest>=7.0.0
-
----
-
 # README.md
-
+---
 # Capricorn AI
 
 Deep-learning based histopathology image classifier built with TensorFlow Keras.

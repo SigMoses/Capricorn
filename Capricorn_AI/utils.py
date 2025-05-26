@@ -2,10 +2,11 @@
 """
 Utility functions for image loading, preprocessing, and prediction.
 """
-import numpy as np
-from PIL import Image
+import numpy as np # type: ignore
+from PIL import Image # type: ignore
 
 from .models import load_model as _load_model
+from .labels import ALL_LABELS, NUM_CLASSES
 
 
 def load_image(path, target_size=(224, 224)):

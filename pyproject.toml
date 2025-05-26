@@ -1,0 +1,45 @@
+# pyproject.toml
+
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "capricorn"
+version = "0.1.0"
+description = "Deep learning histopathology classification with Keras"
+readme = "README.md"
+requires-python = ">=3.7"
+dependencies = [
+  "tensorflow>=2.0",
+  "numpy>=1.19",
+  "Pillow>=8.0",
+  # ...any other entries from requirements.txt...
+]
+authors = [
+  { name="Moshe Newman" },
+]
+license = { text="MIT" }
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Framework :: TensorFlow",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+]
+
+[project.urls]
+"Homepage"   = "https://github.com/SigMoses/Capricorn"
+"Repository" = "https://github.com/SigMoses/Capricorn"
+
+[tool.setuptools]
+# find all packages under your src
+packages = { find = {} }
+include-package-data = true
+
+[tool.setuptools.packages.find]
+# adjust these to match your actual package directory name
+where = ["."]
+include = ["capricorn", "capricorn.*"]
+
+[tool.setuptools.package-data]
+"capricorn" = ["ai_models/*.keras"]

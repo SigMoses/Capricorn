@@ -1,0 +1,16 @@
+Credits
+=======
+
+Original Progenitor:
+  Capricorn AI was conceived and developed by Moshe Newman.
+
+Dataset:
+  This project relies on the MedMNIST dataset. Please credit the MedMNIST team:
+
+  - Yang, Jiancheng, et al. "MedMNIST v2—A large-scale lightweight benchmark for 2D and 3D biomedical image classification." Scientific Data, 2023.
+  - Yang, Jiancheng; Shi, Rui; Ni, Bingbing. "MedMNIST Classification Decathlon: A Lightweight AutoML Benchmark for Medical Image Analysis." IEEE 18th International Symposium on Biomedical Imaging (ISBI), 2021.
+
+Usage & Modification:
+  You are free to modify or use this code as you please, provided that you
+  acknowledge Moshe Newman as the original progenitor of Capricorn AI and
+  credit the MedMNIST team for their dataset as cited above.

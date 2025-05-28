@@ -83,6 +83,22 @@ for label, confidence in label_confidences(probs):
 4. Update docs and add tests.
 5. Submit a pull request.
 
+## Credits
+
+- **Original Progenitor**  
+  Capricorn AI was conceived and developed by **Moshe Newman**.  
+
+- **Dataset**  
+  This project relies on the MedMNIST dataset. Please credit the MedMNIST team as follows:  
+  > Jiancheng Yang, Rui Shi, Donglai Wei, Zequan Liu, Lin Zhao, Bilian Ke, Hanspeter Pfister, Bingbing Ni.  
+  > “MedMNIST v2—A large-scale lightweight benchmark for 2D and 3D biomedical image classification.” *Scientific Data*, 2023.  
+  >  
+  > Jiancheng Yang, Rui Shi, Bingbing Ni.  
+  > “MedMNIST Classification Decathlon: A Lightweight AutoML Benchmark for Medical Image Analysis.” *IEEE 18th International Symposium on Biomedical Imaging (ISBI)*, 2021.
+
+- **Usage & Modification**  
+  You are free to modify or use this code as you please, **provided** that you retain proper credit to Moshe Newman as the original progenitor of Capricorn AI, and credit the MedMNIST team for the dataset as cited above.
+
 ## License
 
 [MIT License](LICENSE)

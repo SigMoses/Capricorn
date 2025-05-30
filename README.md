@@ -7,6 +7,7 @@ Deep-learning based histopathology image classifier built with TensorFlow Keras.
 ## Overview
 
 Capricorn AI provides pre-trained Keras models for classifying H\&E–stained tissue patches into diagnostic categories. It offers a simple Python API to load different model versions, run inference on images, and integrate into larger pipelines.
+PyPI link: https://pypi.org/project/capricorn-ai/
 
 ## Installation
 
@@ -19,7 +20,7 @@ cd capricorn
 pip install -r requirements.txt
 
 # Install as a package
-pip install .
+pip install capricorn-ai.
 ```
 
 Alternatively, install directly from GitHub:

@@ -20,7 +20,7 @@ cd capricorn
 pip install -r requirements.txt
 
 # Install as a package
-pip install capricorn-ai.
+pip install capricorn-ai
 ```
 
 Alternatively, install directly from GitHub:

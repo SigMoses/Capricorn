@@ -27,7 +27,8 @@ def _categorize(label: str) -> str:
     if label in path_labels:
         return "Colon Histology"
     if label in derma_labels:
-        return "Skin Bathology"
+        # Typo fix: this category should be "Skin Pathology"
+        return "Skin Pathology"
     if label in blood_labels:
         return "Blood Smear"
     return "Unknown"

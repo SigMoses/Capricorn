@@ -11,9 +11,11 @@ from .labels import ALL_LABELS, path_labels, derma_labels, blood_labels
 
 def load_image(path, target_size=(224, 224)):
     """Load an image file and return as a NumPy array."""
-    img = Image.open(path).convert('RGB')
-    img = img.resize(target_size)
-    return np.array(img)
+    with Image.open(path) as img:
+        img = img.convert('RGB')
+        img = img.resize(target_size)
+        array = np.array(img)
+    return array
 
 
 def preprocess_input(img_array, model_name='capricorn0.1'):

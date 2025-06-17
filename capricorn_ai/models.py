@@ -3,7 +3,12 @@
 Loader functions for pre-trained Keras models.
 """
 import os
-from tensorflow.keras.models import load_model as keras_load_model
+
+# Import TensorFlow lazily to avoid heavy dependency at module import time
+try:
+    from tensorflow.keras.models import load_model as keras_load_model
+except Exception:  # pragma: no cover - optional dependency
+    keras_load_model = None
 
 # Point at our package’s keras_models/ folder, not the old top-level models/
 default_models_dir = os.path.join(
@@ -31,5 +36,9 @@ def get_model_path(name):
 
 def load_model(name):
     """Load and return the Keras model for the given name."""
+    if keras_load_model is None:
+        raise ImportError(
+            "TensorFlow is required to load models but is not installed."
+        )
     path = get_model_path(name)
     return keras_load_model(path)

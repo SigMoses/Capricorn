@@ -32,7 +32,7 @@ pip install git+https://github.com/SigMoses/Capricorn.git
 ## Quickstart
 
 ```python
-from capricorn import list_models, load_model, load_image, predict
+from capricorn_ai import list_models, load_model, load_image, predict
 
 # List available models
 print(list_models())  # ['capricorn0.1']
@@ -48,7 +48,7 @@ print(detections)
 ## Example Usage
 
 ```python
-from capricorn import load_image, predict, ALL_LABELS, label_confidences
+from capricorn_ai import load_image, predict, ALL_LABELS, label_confidences
 
 # Load and preprocess an image patch
 img = load_image("path/to/patch.png")
@@ -65,7 +65,7 @@ for label, confidence in label_confidences(probs):
 
 * **capricorn0.1**: Initial version trained on PathMNIST subsets.
 
-*Add your own retrained models by placing the `.keras` file in `capricorn/ai_models/` and updating `capricorn/ai_models.py`.*
+*Add your own retrained models by placing the `.keras` file in `capricorn_ai/ai_models/` and updating `capricorn_ai/models.py`.*
 
 ## Development & Testing
 
@@ -80,7 +80,7 @@ for label, confidence in label_confidences(probs):
 
 1. Fork the repository.
 2. Create a new branch (`git checkout -b feature/my-model`).
-3. Add your `.keras` model in `capricorn/ai_models/` and register it in `capricorn/models.py`.
+3. Add your `.keras` model in `capricorn_ai/ai_models/` and register it in `capricorn_ai/models.py`.
 4. Update docs and add tests.
 5. Submit a pull request.
 

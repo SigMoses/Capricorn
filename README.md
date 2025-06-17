@@ -19,6 +19,9 @@ cd capricorn
 # Install dependencies
 pip install -r requirements.txt
 
+# Install TensorFlow (use the stable release or the tf-nightly build)
+pip install tensorflow  # or tf-nightly
+
 # Install as a package
 pip install capricorn-ai
 ```
@@ -69,7 +72,7 @@ for label, confidence in label_confidences(probs):
 
 ## Development & Testing
 
-* Dependencies are in `requirements.txt`.
+* Dependencies are in `requirements.txt` (install `tensorflow` or `tf-nightly` separately).
 * Run tests with:
 
   ```bash

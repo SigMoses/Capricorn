@@ -1,3 +1,3 @@
-tensorflow>=2.10.0
+# Install either the stable TensorFlow package or the tf-nightly build
 numpy>=1.19.5
 Pillow>=8.0.0
